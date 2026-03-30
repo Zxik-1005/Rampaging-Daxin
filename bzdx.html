@@ -26,31 +26,12 @@
         }
         .survey-title {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         .survey-title h1 {
             font-size: 24px;
             font-weight: 500;
             margin-bottom: 10px;
-        }
-        /* 二维码区域样式 */
-        .qr-box {
-            text-align: center;
-            margin-bottom: 30px;
-            padding: 15px;
-            background: white;
-            border-radius: 10px;
-        }
-        .qr-box p {
-            color: #6366f1;
-            font-size: 16px;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        #qrcode {
-            width: 180px;
-            height: 180px;
-            margin: 0 auto;
         }
         .question-item {
             margin-bottom: 25px;
@@ -98,12 +79,7 @@
             <h1>大学生烟酒行为调查问卷</h1>
         </div>
 
-        <!-- 🔴 自动生成的二维码 -->
-        <div class="qr-box">
-            <p>扫码填写问卷</p>
-            <div id="qrcode"></div>
-        </div>
-
+        <!-- 关键：这里 action 换成你的 Form ID 就能接收数据 -->
         <form action="https://submit-form.com/WEMwRdD6e" method="POST">
             <!-- 第1题 -->
             <div class="question-item">
@@ -150,21 +126,5 @@
             <button type="submit" class="submit-btn">提交问卷</button>
         </form>
     </div>
-
-    <!-- 二维码生成库 -->
-    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
-    <script>
-        // 生成当前页面的二维码
-        QRCode.toCanvas(document.getElementById('qrcode'), window.location.href, {
-            width: 180,
-            margin: 1,
-            color: {
-                dark: '#6366f1',
-                light: '#ffffff'
-            }
-        }, function (error) {
-            if (error) console.error(error)
-        })
-    </script>
 </body>
 </html>
